@@ -1,0 +1,429 @@
+{
+  "info": {
+    "_postman_id": "1f0a6389-c03a-4043-96ee-0ca4b4f314b4",
+    "name": "TaskFlow",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "36509764"
+  },
+  "item": [
+    {
+      "name": "User",
+      "item": [
+        {
+          "name": "Signup_user",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\": \"user3\",\r\n    \"email\":\"user3@gmail.com\",\r\n    \"role\": \"user\",\r\n    \"password\":\"user1234\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{server}}/users/register",
+              "host": [
+                "{{server}}"
+              ],
+              "path": [
+                "users",
+                "register"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "login_user",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"email\": \"user1@gmail.com\",\r\n    \"role\":\"user\",\r\n    \"password\": \"user1234\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{server}}/users/login",
+              "host": [
+                "{{server}}"
+              ],
+              "path": [
+                "users",
+                "login"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "signup_admin",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\": \"admin1\",\r\n    \"email\":\"admin1@gmail.com\",\r\n    \"role\": \"admin\",\r\n    \"password\":\"admin1234\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{server}}/users/register",
+              "host": [
+                "{{server}}"
+              ],
+              "path": [
+                "users",
+                "register"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "logout",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"email\": \"user1@gmail.com\",\r\n    \"role\":\"user\",\r\n    \"password\": \"user1234\"\r\n}"
+            },
+            "url": {
+              "raw": "{{server}}/users/logout",
+              "host": [
+                "{{server}}"
+              ],
+              "path": [
+                "users",
+                "logout"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "refresh",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"email\": \"user1@gmail.com\",\r\n    \"role\":\"user\",\r\n    \"password\": \"user1234\"\r\n}"
+            },
+            "url": {
+              "raw": "{{server}}/users/refresh",
+              "host": [
+                "{{server}}"
+              ],
+              "path": [
+                "users",
+                "refresh"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "currentUser",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"email\": \"user1@gmail.com\",\r\n    \"role\":\"user\",\r\n    \"password\": \"user1234\"\r\n}"
+            },
+            "url": {
+              "raw": "{{server}}/users/currentUser",
+              "host": [
+                "{{server}}"
+              ],
+              "path": [
+                "users",
+                "currentUser"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get_users_tasks",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{server}}/users/tasks",
+              "host": [
+                "{{server}}"
+              ],
+              "path": [
+                "users",
+                "tasks"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get_admins_tasks",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{server}}/users/admin/tasks",
+              "host": [
+                "{{server}}"
+              ],
+              "path": [
+                "users",
+                "admin",
+                "tasks"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "login_admin",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"email\":\"admin1@gmail.com\",\r\n    \"role\":\"admin\",\r\n    \"password\":\"admin1234\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{server}}/users/login",
+              "host": [
+                "{{server}}"
+              ],
+              "path": [
+                "users",
+                "login"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Tasks",
+      "item": [
+        {
+          "name": "task_create",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"title\": \"Complete Backend API\",\r\n  \"description\": \"Finish task controller and authentication\",\r\n  \"priority\": \"high\",\r\n  \"dueDate\": \"2026-04-05\",\r\n  \"assignedTo\": \"69c80cc1ccd1f838424fda1e\",\r\n  \"tags\": [\"backend\", \"urgent\"]\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{server}}/tasks/create",
+              "host": [
+                "{{server}}"
+              ],
+              "path": [
+                "tasks",
+                "create"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get all tasks",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"title\": \"Complete Backend API\",\r\n  \"description\": \"Finish task controller and authentication\",\r\n  \"priority\": \"high\",\r\n  \"dueDate\": \"2026-04-05\",\r\n  \"assignedTo\": \"69c80cc1ccd1f838424fda1e\",\r\n  \"tags\": [\"backend\", \"urgent\"]\r\n}"
+            },
+            "url": {
+              "raw": "{{server}}/tasks/all",
+              "host": [
+                "{{server}}"
+              ],
+              "path": [
+                "tasks",
+                "all"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get a task",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"title\": \"Complete Backend API\",\r\n  \"description\": \"Finish task controller and authentication\",\r\n  \"priority\": \"high\",\r\n  \"dueDate\": \"2026-04-05\",\r\n  \"assignedTo\": \"69c80cc1ccd1f838424fda1e\",\r\n  \"tags\": [\"backend\", \"urgent\"]\r\n}"
+            },
+            "url": {
+              "raw": "{{server}}/tasks/69c815835879d8cc5d1c976b",
+              "host": [
+                "{{server}}"
+              ],
+              "path": [
+                "tasks",
+                "69c815835879d8cc5d1c976b"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "update_task",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"title\": \"Build Task Manager\",\r\n  \"description\": \"Complete backend APIs\",\r\n  \"priority\": \"high\",\r\n  \"dueDate\": \"2026-04-05T10:00:00.000Z\",\r\n  \"assignedTo\": \"69c80cc1ccd1f838424fda1e\",\r\n  \"tags\": [\"backend\", \"urgent\"]\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{server}}/tasks/69c815835879d8cc5d1c976b",
+              "host": [
+                "{{server}}"
+              ],
+              "path": [
+                "tasks",
+                "69c815835879d8cc5d1c976b"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "delete task",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{server}}/tasks/69c815835879d8cc5d1c976b",
+              "host": [
+                "{{server}}"
+              ],
+              "path": [
+                "tasks",
+                "69c815835879d8cc5d1c976b"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "task_status_change by user",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"status\":\"completed\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{server}}/tasks/69c8159a5879d8cc5d1c9771/status",
+              "host": [
+                "{{server}}"
+              ],
+              "path": [
+                "tasks",
+                "69c8159a5879d8cc5d1c9771",
+                "status"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
